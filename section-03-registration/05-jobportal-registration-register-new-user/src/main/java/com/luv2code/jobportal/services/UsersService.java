@@ -22,4 +22,8 @@ public class UsersService {
         users.setRegistrationDate(new Date(System.currentTimeMillis()));
         return usersRepository.save(users);
     }
+
+    public Users getUserByEmail(String email) {
+        return usersRepository.getByEmail(email);
+    }
 }
